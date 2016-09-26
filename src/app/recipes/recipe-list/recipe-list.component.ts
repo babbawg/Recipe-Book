@@ -8,9 +8,14 @@ import { RecipeItemComponent } from './recipe-item.component';
 })
 export class RecipeListComponent implements OnInit {
 
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('Lasagne', "Lasagne alla bolognese", 'http://www.saison.ch/media/uploads/filer/public/2015/07/27/mm201508lasagne.jpg.256x256_q85_crop_upscale.jpg', []),
+    new Recipe('Risotto', "Risotto alla mantovana", 'http://www.saison.ch/media/uploads/filer/public/2011/08/15/20100233a.jpg.256x256_q85_crop_upscale.jpg', []),
+    new Recipe('Cotoletta', "Cotoletta alla milanese", 'http://images.bigoven.com/image/upload/t_recipe-256/chicken-milanese-breaded-chicken-cu-11.jpg', [])
+  ];
+
   @Output() recipeSelected = new EventEmitter<Recipe>();
-  recipe = new Recipe('Dummy', "Dummy description of test", 'http://newsdesignlist.it/site/wp-content/uploads/2016/06/8a40duo_coffee_steeper_1-120x120.jpg');
+  
 
   constructor() { }
 
